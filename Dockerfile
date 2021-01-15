@@ -1,4 +1,4 @@
-FROM alpine:edge
+FROM alpine:3.13
 
 LABEL version "1.0.20"
 LABEL description "Sysbench as Docker Image"
