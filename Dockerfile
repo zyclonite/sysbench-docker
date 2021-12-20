@@ -1,11 +1,12 @@
-FROM alpine:3.13
+FROM alpine:3.15
 
 LABEL version "1.0.20"
 LABEL description "Sysbench as Docker Image"
 
+ARG version="1.0.20-r0"
+
 RUN apk add --no-cache --purge --clean-protected -u \
- -X http://dl-cdn.alpinelinux.org/alpine/edge/testing \
- ca-certificates sysbench \
+ ca-certificates sysbench=$version \
  && rm -rf /var/cache/apk/*
 
 ENTRYPOINT [ "sysbench" ]
