@@ -13,7 +13,6 @@ on:
 env:
   IMAGE_OWNER: zyclonite
   IMAGE_NAME: sysbench
-  STORAGE_DRIVER: overlay
 
 jobs:
   build:
